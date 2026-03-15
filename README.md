@@ -205,3 +205,4 @@ But they belong to different generations and have significant differences in per
 |Interface|I2C only (depending on the module)|SPI + I2C|
 |Accelerometer Resolution|16-bit|18-bit|
 |Gyroscope Resolution|16-bit|19-bit|
+|Price|Very cheap|Expensive|

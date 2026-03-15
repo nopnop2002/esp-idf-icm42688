@@ -65,7 +65,7 @@ idf.py flash
 I used [this](https://github.com/arduino-libraries/MadgwickAHRS).
 ```
 git clone https://github.com/nopnop2002/esp-idf-icm42688
-cd esp-idf-icm42688icm42688/Madgwick
+cd esp-idf-icm42688/Madgwick
 idf.py set-target {esp32/esp32s2/esp32s3/esp32c2/esp32c3/esp32c6}
 idf.py menuconfig
 idf.py flash
@@ -193,3 +193,15 @@ options:
 ### How to use   
 See [here](https://github.com/nopnop2002/esp-idf-mpu6050-dmp/blob/main/panda3d/README.md)   
 
+
+# MPU6050 and ICM42688 Comparison
+Both the MPU6050 and ICM42688 are TDK InvenSense 6-axis IMUs (accelerometer + gyroscope).   
+But they belong to different generations and have significant differences in performance and application.   
+|Features|MPU6050|ICM42688|
+|:-:|:-:|:-:|
+|Generation|Old generation|Latest generation|
+|Noise|High|Extremely low|
+|Output Rate|Low (Maximum 1kHz)|Very High (Maximum 32kHz)|
+|Interface|I2C only (depending on the module)|SPI + I2C|
+|Accelerometer Resolution|16-bit|18-bit|
+|Gyroscope Resolution|16-bit|19-bit|

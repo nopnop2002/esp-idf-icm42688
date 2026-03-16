@@ -206,3 +206,4 @@ But they belong to different generations and have significant differences in per
 |Accelerometer Resolution|16-bit|18-bit|
 |Gyroscope Resolution|16-bit|19-bit|
 |Price|Very cheap|Expensive|
+|DMP|Supported|Not Supported|

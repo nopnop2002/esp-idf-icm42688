@@ -194,16 +194,16 @@ options:
 See [here](https://github.com/nopnop2002/esp-idf-mpu6050-dmp/blob/main/panda3d/README.md)   
 
 
-# MPU6050 and ICM42688 Comparison
-Both the MPU6050 and ICM42688 are TDK InvenSense 6-axis IMUs (accelerometer + gyroscope).   
+# MPU6500 and ICM42688 Comparison
+Both the MPU6500 and ICM42688 are TDK InvenSense 6-axis IMUs (accelerometer + gyroscope).   
 But they belong to different generations and have significant differences in performance and application.   
-|Features|MPU6050|ICM42688|
+|Features|MPU6500|ICM42688|
 |:-:|:-:|:-:|
 |Generation|Old generation|Latest generation|
 |Noise|High|Extremely low|
 |Output Rate|Low (Maximum 1kHz)|Very High (Maximum 32kHz)|
-|Interface|I2C only (depending on the module)|SPI + I2C|
 |Accelerometer Resolution|16-bit|18-bit|
 |Gyroscope Resolution|16-bit|19-bit|
 |Price|Very cheap|Expensive|
 |DMP|Supported|Not Supported|
+|Register Map|Flat model|Multi bank model|

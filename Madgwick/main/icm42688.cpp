@@ -70,6 +70,14 @@ void icm42688(void *pvParameters)
 		vTaskDelete(NULL);
 	}
 
+	// Calculate the offset
+	ESP_LOGW(TAG, "IMU is currently being calibrated. Please do not move it.");
+	IMU.computeOffsets();
+
+	// Set the offset
+	IMU.setAllOffsets();
+	ESP_LOGW(TAG, "IMU calibration is complete.");
+
 	double ax, ay, az;
 	double gx, gy, gz;
 	double last_time_ = TimeToSec();

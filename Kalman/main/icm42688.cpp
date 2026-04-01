@@ -76,6 +76,14 @@ void icm42688(void *pvParameters)
 		vTaskDelete(NULL);
 	}
 
+	// Calculate the offset
+	ESP_LOGW(TAG, "IMU is currently being calibrated. Please do not move it.");
+	IMU.computeOffsets();
+
+	// Set the offset
+	IMU.setAllOffsets();
+	ESP_LOGW(TAG, "IMU calibration is complete.");
+
 	// Set Kalman and gyro starting angle
 	double ax, ay, az;
 	double gx, gy, gz;

@@ -1,6 +1,6 @@
 #include <math.h>
 #include <cstring>
-#include <driver/i2c_master.h>
+#include "driver/i2c_master.h"
 #include "esp_rom_sys.h"
 #include "ICM42688.h"
 #include "registers.h"
@@ -733,6 +733,8 @@ int ICM42688::computeOffsets() {
 	_rawGyrBias[0] = (int32_t)((double)_rawGyrBias[0] / (double)NUM_CALIB_SAMPLES);
 	_rawGyrBias[1] = (int32_t)((double)_rawGyrBias[1] / (double)NUM_CALIB_SAMPLES);
 	_rawGyrBias[2] = (int32_t)((double)_rawGyrBias[2] / (double)NUM_CALIB_SAMPLES);
+	//printf("_rawAccBias=%ld %ld %ld\n", _rawAccBias[0], _rawAccBias[1], _rawAccBias[2]);
+	//printf("_rawGyrBias=%ld %ld %ld\n", _rawGyrBias[0], _rawGyrBias[1], _rawGyrBias[2]);
 
 	//compensate gravity and compute the _AccOffset and _GyrOffset
 	for (size_t ii = 0; ii < 3; ii++) {
@@ -746,6 +748,8 @@ int ICM42688::computeOffsets() {
 		}
 		_GyrOffset[ii] = (int16_t)((-_rawGyrBias[ii]) * (FullScale_Gyr / 32768.0f * 32));  //1/32 dps resolution
 	}
+	printf("_AccOffset=%d %d %d\n", _AccOffset[0], _AccOffset[1], _AccOffset[2]);
+	printf("_GyrOffset=%d %d %d\n", _GyrOffset[0], _GyrOffset[1], _GyrOffset[2]);
 
 	// Serial.println("The new raw Bias are:");
 	// for(size_t ii = 0; ii< 3; ii++){

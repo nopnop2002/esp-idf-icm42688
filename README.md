@@ -15,6 +15,7 @@ Because this project uses the new I2C driver.
 
 # Hardware requirements
 ICM42688 Accelerometer Gyroscope module 6 Dof inertial Measurement Sensors.   
+<img width="864" height="576" alt="Image" src="https://github.com/user-attachments/assets/71db0ace-2549-479c-a812-3ec4181a5775" />
 
 # Wireing
 |ICM42688||ESP32|ESP32-S2/S3|ESP32-Cx||
@@ -56,9 +57,8 @@ idf.py flash
 ```
 
 ### Configuration
-![config-top](https://user-images.githubusercontent.com/6020549/226072705-e26bfc3e-1a70-4df2-98c9-a603daf58761.jpg)
-![config-app](https://user-images.githubusercontent.com/6020549/226072711-ce59da34-bf0e-4bc2-8305-851f5d418097.jpg)
-
+<img width="659" height="486" alt="Image" src="https://github.com/user-attachments/assets/79ed5e1e-f60c-4697-831b-a64c5d24f18a" />
+<img width="659" height="486" alt="Image" src="https://github.com/user-attachments/assets/458cabc4-7515-4737-86cc-2b84eac8e502" />
 
 # Get Euler angles from icm42688 using Madgwick filter
 I used [this](https://github.com/arduino-libraries/MadgwickAHRS).
@@ -70,8 +70,8 @@ idf.py flash
 ```
 
 ### Configuration
-![config-top](https://user-images.githubusercontent.com/6020549/226072705-e26bfc3e-1a70-4df2-98c9-a603daf58761.jpg)
-![config-app](https://user-images.githubusercontent.com/6020549/226072711-ce59da34-bf0e-4bc2-8305-851f5d418097.jpg)
+<img width="659" height="486" alt="Image" src="https://github.com/user-attachments/assets/3ee5f835-72e8-46a5-87c4-815f148e1065" />
+<img width="659" height="486" alt="Image" src="https://github.com/user-attachments/assets/7d49f223-d049-4f2c-947d-ba64fe3c4cec" />
 
 # View Euler angles with built-in web server   
 ESP32 acts as a web server.   

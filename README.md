@@ -17,7 +17,7 @@ Because this project uses the new I2C driver.
 ICM42688 Accelerometer Gyroscope module 6 Dof inertial Measurement Sensors.   
 
 # Wireing
-|ICM42688||ESP32|ESP32-S2/S3|ESP32-C2/C3/C6||
+|ICM42688||ESP32|ESP32-S2/S3|ESP32-Cx||
 |:-:|:-:|:-:|:-:|:-:|:-:|
 |VCC|--|3.3V|3.3V|3.3V||
 |GND|--|GND|GND|GND||
@@ -51,7 +51,6 @@ I used [this](https://github.com/TKJElectronics/KalmanFilter).
 ```
 git clone https://github.com/nopnop2002/esp-idf-icm42688
 cd esp-idf-icm42688/Kalman
-idf.py set-target {esp32/esp32s2/esp32s3/esp32c2/esp32c3/esp32c6}
 idf.py menuconfig
 idf.py flash
 ```
@@ -66,7 +65,6 @@ I used [this](https://github.com/arduino-libraries/MadgwickAHRS).
 ```
 git clone https://github.com/nopnop2002/esp-idf-icm42688
 cd esp-idf-icm42688/Madgwick
-idf.py set-target {esp32/esp32s2/esp32s3/esp32c2/esp32c3/esp32c6}
 idf.py menuconfig
 idf.py flash
 ```
